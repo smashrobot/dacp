@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="twelve columns">
+      <div class="big_logo">
+        <%= image_tag asset_path("big_logo.png"), :class => "centred_logo" %>
+      </div>
+      <div class="big_form">
+        <%= form_tag password_resets_path, :method => :post do %>
+          <div class="field">
+            <%= label_tag :email %>
+            <%= text_field_tag :email, params[:email], :autofocus => true, :class => "u-full-width big" %>
+          </div>
+          <div class="actions">
+            <%= submit_tag "Reset Password", :class => "clickable btn btn-blue btn-big" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
